@@ -3,6 +3,7 @@ import Navbar from "./sections/NavBar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 const App = () => {
     return (
         <>
@@ -11,6 +12,9 @@ const App = () => {
     <div className="relative z-10">  {/* Ensure this is above the 3D content */}
         <About />
         <Projects />
+       
+       
+        <Contact />
       </div>
     </>
       

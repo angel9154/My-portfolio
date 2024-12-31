@@ -41,16 +41,15 @@ const Projects = () => {
                 <div className="flex items-center gap-3">
                   {currentProject.tags.map((tag, index) => (
                     <div key={index} className="tech-logo">
-                      <img src={tag.path} alt={tag.name} />
+                      <img src={tag.path} alt={tag.name}  />
                     </div>
                   ))}
                 </div>
 
                 <a className="flex items-center gap-2 cursor-pointer text-white-600" 
                 href={currentProject.href} target="_blank" rel="noreferrer">
-                  <p>Check Live Site
-                    <img src="/assets?arrow-up.png" className="w-3 h-3" alt="arrow" />
-                  </p>
+                  <p className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 bg-opacity">Check GitHub Repo</p>
+                    <img src="/assets/github.png" className="w-10 h-10" alt="github" />
                 </a>
               </div>
 

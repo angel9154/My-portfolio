@@ -59,9 +59,8 @@ export const navLinks = [
   export const myProjects = [
     {
       title: 'Paws & Found Server.js',
-      desc: 'Developed with my classmates a full-stack dog adoption platform using Node.js, Express, and MongoDB, with features for dog listing management, user roles, and lost & found reports..',
-      subdesc:
-        'User Authentication & Authorization: Built a user schema for admins, ensuring secure management with role-based access control. Dog Adoption Management: Created a schema for posting, editing, updating, and deleting dog adoption listings, enabling efficient management. Lost & Found Reports: Implemented a report schema for users to submit lost or found dog reports, aiding in reuniting pets with owners. MongoDB Integration: Utilized MongoDB to manage user, dog, and report data, ensuring efficient storage and retrieval. API Development: Designed RESTful APIs to interact with the database, enabling seamless front-end and back-end communication.',
+      desc: 'Developed a full-stack dog adoption server with my classmates using Node.js, Express, and MongoDB, featuring dog listing management, user roles, and lost & found reports; built user authentication with role-based access control for secure admin management; created schemas for posting, editing, updating, and deleting dog adoption listings; implemented a report schema for submitting lost & found dog reports; integrated MongoDB for efficient storage and retrieval of user, dog, and report data; designed RESTful APIs for seamless front-end and back-end communication; ensured scalability and reliability of the platform for ongoing use.',
+      
       href: 'https://github.com/angel9154/Paws-Found-Server.js',
       texture: '/textures/project/project1.mp4',
       logo: '/assets/dog.png',
@@ -80,28 +79,27 @@ export const navLinks = [
         {
           id: 2,
           name: 'Javascript',
-          path: 'assets/javacript.png',
+          path: 'assets/js.png',
         },
         {
           id: 3,
           name: 'MongoDB',
-          path: '/assets/mongo.png',
+          path: '/assets/sql-server.png',
         },
         {
           id: 4,
           name: 'Node.js',
-          path: '/assets/node.png',
+          path: '/assets/programing.png',
         },
       ],
     },
     {
-      title: 'LiveDoc - Real-Time Google Docs Clone',
-      desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
-      subdesc:
-        'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-      href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+      title: 'Snowboarding Management Application',
+      desc: 'Developed a Snowboarding Management Application allowing admin users to perform CRUD (Create, Read, Update, Delete) operations on snowboards, along with a dynamic recommendation engine that suggests the ideal snowboard based on user skill level using an algorithm to assess input and provide personalized recommendations, enhancing the overall user experience.',
+      
+      href: 'https://github.com/angel9154/my-project-2',
       texture: '/textures/project/project2.mp4',
-      logo: '/assets/project-logo2.png',
+      logo: '/assets/snowboard (1).png',
       logoStyle: {
         backgroundColor: '#13202F',
         border: '0.2px solid #17293E',
@@ -111,34 +109,33 @@ export const navLinks = [
       tags: [
         {
           id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
+          name: 'HTML',
+          path: '/assets/html.png',
         },
         {
           id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
+          name: 'CSS',
+          path: 'assets/text.png',
         },
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
+          name: 'JavaScript',
+          path: '/assets/js.png',
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'node.js',
+          path: '/assets/programing.png',
         },
       ],
     },
     {
-      title: 'CarePulse - Health Management System',
-      desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-      subdesc:
-        'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
+      title: 'This Portfolio that you are looking at ',
+      desc: 'Developed my first professional portfolio using React, Three.js, and Next.js, showcasing a modern interactive design with React for component-based architecture, Next.js for server-side rendering and optimized performance, and Three.js for immersive 3D visual elements; focused on responsive design for compatibility across devices, implemented smooth navigation and interactive features, and emphasized clean code, modular design, and performance optimization for a seamless user experience.',
+      
       href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
       texture: '/textures/project/project3.mp4',
-      logo: '/assets/project-logo3.png',
+      logo: '/assets/portfolio.png',
       logoStyle: {
         backgroundColor: '#60f5a1',
         background:
