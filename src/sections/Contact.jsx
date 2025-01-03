@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef } from 'react'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 const Contact = () => {
     const formRef = useRef();
 
@@ -16,18 +17,41 @@ const handleChange = ({target: {name, value}}) => {
     setForm({...form, [name]: value})
 }
 
-// service_xs5ikpc
+// service_zpsgtje
 
-const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    setLoading(true);
+  setLoading(true);
+
+  try {
+      await emailjs.send('service_zpsgtje', 
+                  'template_194hcfh',
+                   {from_name: form.name, to_name: 'Angel', 
+                    from_email: form.email,
+                     to_email: 'angelgerenavazquez@outlook.com', 
+                     message: form.message},
+                     'w9WzpVB25JWPv0_og'
+                     );
+                     
+      setLoading(false);
+      alert('Thank you. I will get back to you as soon as possible.');
+      setForm({name: '', email: '', message: ''})
+
+  } catch (error) {
+
+      setLoading(false);    
+      console.log(error);
+
+      alert('Sorry there was an error sending your message. Please try again.');
+  }
 }
+
 
   return (
    <section className="c-space my-20">
     <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img src="/assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen" />
+        <img src={`${import.meta.env.BASE_URL}assets/terminal.png`} alt="terminal background" className="absolute inset-0 min-h-screen" />
         <div className="contact-container">
 
   <h3 className="head-text mt-14">How may I help you?</h3>
@@ -75,10 +99,10 @@ const handleSubmit = (e) => {
             placeholder="Hey, I want to give you a job lol..."
           />
         </label>
-         <button className="field-btn" type="submit" disable={loading}>
+         <button className="field-btn" type="submit" disabled={loading}>
          {loading ? 'Sending...' : 'Send Message'}
          
-         <img src="/assets/arrow-up.png" alt= "arrow-up" className="field-btn_arrow" />
+         <img src={`${import.meta.env.BASE_URL}assets/arrow-up.png`} alt= "arrow-up" className="field-btn_arrow" />
         </button>
     </form>
 

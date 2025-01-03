@@ -27,10 +27,10 @@ const Projects = () => {
           <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
             <div className="flex flex-col gap-5 relative  sm:shadow-black-200">
               <div className="absolute top-0 right-0">
-                <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
+                <img src={`${import.meta.env.BASE_URL}${currentProject.spotlight}`} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
               </div>
               <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
-                <img src={currentProject.logo} alt="logo" className="w-10 h-10 shadow-sm" />
+                <img src={`${import.meta.env.BASE_URL}${currentProject.logo}`} alt="logo" className="w-10 h-10 shadow-sm" />
               </div>
               <div className="flex flex-col gap-5 font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 bg-opacity-100 my-5">
                 <p className="text-1xl ">{currentProject.title}</p>
@@ -41,7 +41,7 @@ const Projects = () => {
                 <div className="flex items-center gap-3">
                   {currentProject.tags.map((tag, index) => (
                     <div key={index} className="tech-logo">
-                      <img src={tag.path} alt={tag.name}  />
+                      <img src={`${import.meta.env.BASE_URL}${tag.path}`} alt={tag.name}  />
                     </div>
                   ))}
                 </div>
@@ -49,16 +49,16 @@ const Projects = () => {
                 <a className="flex items-center gap-2 cursor-pointer text-white-600" 
                 href={currentProject.href} target="_blank" rel="noreferrer">
                   <p className="font-bold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 bg-opacity">Check GitHub Repo</p>
-                    <img src="/assets/github.png" className="w-10 h-10" alt="github" />
+                    <img src={`${import.meta.env.BASE_URL}assets/github.png`}  className="w-10 h-10" alt="github" />
                 </a>
               </div>
 
                   <div className="flex justify-between items-center mt-7">
                     <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
-                      <img src="/assets/left-arrow.png" alt="left arrow" className="w-4 h-4"/> 
+                      <img src={`${import.meta.env.BASE_URL}assets/left-arrow.png`} alt="left arrow" className="w-4 h-4"/> 
                     </button>
                     <button className="arrow-btn" onClick={() => handleNavigation('next')}>
-                    <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4"/> 
+                    <img src={`${import.meta.env.BASE_URL}assets/right-arrow.png`} alt="right arrow" className="w-4 h-4"/> 
                     </button>
                   </div>
                 </div>

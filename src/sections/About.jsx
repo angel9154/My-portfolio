@@ -22,7 +22,7 @@
     {/* <!-- First Grid Item --> */}
     <div className="col-span-1 xl:row-span-3">
       <div className="grid-container">
-        <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+        <img src={`${import.meta.env.BASE_URL}assets/grid1.png`} alt="grid" className="w-full sm:h-[276px] h-fit object-contain" />
         <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">
             Hi, I'm Angel</p>
         <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">
@@ -34,7 +34,7 @@
     {/* <!-- Second Grid Item --> */}
     <div className="col-span-1 xl:row-span-3">
       <div className="grid-container">
-        <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain" />
+        <img src={`${import.meta.env.BASE_URL}assets/grid2.png`} alt="grid2" className="w-full sm:w-[276px] h-fit object-contain" />
         <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400"> Tech Stack</p>
         <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">
           I specialize in JavaScript, Node.js, React, MongoDB, Python, and PostgreSQL and now I'm currently 
@@ -70,7 +70,7 @@
     {/* <!-- Fourth Grid Item --> */}
     <div className="xl:col-span-2 xl:row-span-3">
       <div className="grid-container">
-        <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
+        <img src={`${import.meta.env.BASE_URL}assets/grid3.png`} alt="grid3" className="w-full sm:h-[266px] h-fit object-contain" />
         <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">I Want To Change the World</p>
         <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">
           I am passionate about coding and problem-solving, always eager to embrace new challenges. With these skills and the right team, I believe we can create meaningful change and make a lasting impact on the world.
@@ -81,11 +81,17 @@
     {/* <!-- Fifth Grid Item --> */}
     <div className="xl:col-span-1 xl:row-span-2">
       <div className="grid-container">
-        <img src="assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-contain" />
+        <img src={`${import.meta.env.BASE_URL}assets/grid4.png`} alt="grid4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-contain" />
         <div className="space-y-2">
           <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400 text-center">Contact Me</p>
           <div className="copy-container" onClick={handleCopy}>
-            <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="copy" />
+          <img 
+  src={hasCopied 
+    ? `${import.meta.env.BASE_URL}assets/tick.svg` 
+    : `${import.meta.env.BASE_URL}assets/copy.svg`
+  } 
+  alt="copy" 
+/>
             <p className="text-1xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-400">
               angelgerenavazquez@outlook.com
             </p>

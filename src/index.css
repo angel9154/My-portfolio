@@ -17,6 +17,11 @@ body {
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-5;
+    
+  }
+  .f-space{
+    @apply sm:px-10 px-5;
+    min-height: calc(100vh - 100px);
   }
 
   .head-text {
